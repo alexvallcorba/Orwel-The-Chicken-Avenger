@@ -3,8 +3,8 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { baseURL, config } from './services';
 import Heroes from './components/Heroes';
-import Villains from './components/Villains';
-import AddCharacter from './components/AddCharacter';
+// import Villains from './components/Villains';
+// import AddCharacter from './components/AddCharacter';
 import CharacterDetails from './components/CharacterDetails';
 import { Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -16,9 +16,13 @@ function App() {
 
   useEffect(() => {
     const getCharacters = async () => {
+      try {
       const res = await axios.get(baseURL, config)
-      console.log(res.data.records);
       setCharacters(res.data.records)
+      } catch (error) {
+        console.error(error.message)
+      }
+      
     }
     getCharacters()
     
