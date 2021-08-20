@@ -74,8 +74,13 @@ Authorization: Bearer keyMmB85R3Y5HNQL6
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| MVP                       |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Total                     |    H     |    42.5hrs     |     35hrs     |    35hrs    |
+| Axios call, get data and set data                      |    H     |      3hrs      |     hrs      |    hrs     |
+| Create  routes and use params                     |    H     |      4hrs      |     4hrs      |    4hrs     |
+| Create form and send data back to api               |    H     |      3hrs      |     4hrs      |    4hrs     |
+| css basic styling                       |    H     |      5hrs      |     4hrs      |    4hrs     |
+| Advance CSS  |    H     |      6hrs      |     4hrs      |    4hrs     |
+
+| Total                     |    H     |    40hrs     |     35hrs     |    35hrs    |
 
 ## SWOT Analysis
 
