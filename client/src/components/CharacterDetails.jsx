@@ -6,13 +6,10 @@ function CharacterDetails(props) {
     return character.id === Number(id);
   });
   
-
-
-
- return (
+return (
    <div>
      <img
-       class="character-image"
+       className="character-image"
        id="image"
        src={character.fields?.image}
        alt=""

@@ -5,7 +5,7 @@ import React from "react";
     
     <>
     <img src="https://i.imgur.com/wRGhua3.png"
-    class="orwel-logo"
+    className="orwel-logo"
     alt="orwell logo"
       />
     </>

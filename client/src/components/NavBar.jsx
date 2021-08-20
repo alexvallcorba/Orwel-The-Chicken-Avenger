@@ -6,17 +6,29 @@ function NavBar() {
     <ul className="nav-bar">
       <li>
         <Link to="/heroes">
-          <h1>Heroes</h1>
+          <img
+            className="links"
+            src="https://i.imgur.com/CNwhMRO.png"
+            alt="Heroes Tab"
+          />
         </Link>
       </li>
       <li>
-        <Link to="/villans">
-          <h1>Villans</h1>
+        <Link to="/villains">
+          <img
+            className="links"
+            src="https://i.imgur.com/jkRyfYC.png"
+            alt="villains Tab"
+          />
         </Link>
       </li>
       <li>
-        <Link to="/character/add">
-        <h1>Add Character</h1>
+        <Link to="/addcharacter">
+          <img
+            className="links"
+            src="https://i.imgur.com/CCJkzoe.png"
+            alt="New Characters Tab"
+          />
         </Link>
       </li>
     </ul>
@@ -24,4 +36,3 @@ function NavBar() {
 }
 
 export default NavBar;
-        
