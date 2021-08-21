@@ -11,7 +11,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:  center;
+  background-position:  center center;
 
 }
   
@@ -23,6 +23,40 @@
 
 .links {
   height:100px;
+}
+
+.nav-bar {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:flex-end;
+  align-items:flex-start;
+  align-content:space-between;
+}
+
+#link2 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+   
+  
+.character-box {
+  
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.video {
+  display: flexbox;
+  margin: auto;
+  border: 15px solid rgb(8, 8, 8);
+  border-radius: 30px;
+  
+}
+
+.spray {
+  height: 150px;
 }
 
 .footer {

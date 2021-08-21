@@ -10,13 +10,21 @@ function Heroes(props) {
 
   return (
     <>
+      <div className="character-box">
         {heroes.map((hero) => {
           return (
             <div key={hero.id}>
-              <Link to={`/characterdetails/${hero.id}`}></Link>
+              <Link to={`/characterDetails/${hero.id}`}>
+              <img
+                className="spray"
+                src={hero.fields.spray}
+                alt="heroes-spray"
+                />
+                </Link>
             </div>
           );
         })}
+        </div>
     </>
   );
 }
