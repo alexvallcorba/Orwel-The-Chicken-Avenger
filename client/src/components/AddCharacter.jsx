@@ -1,75 +1,94 @@
 import { useState } from "react";
 import { baseURL, config } from '../services';
 import axios from 'axios'
-import { useHistory } from "react-router";
+import { useParams} from 'react-router-dom'
 
 
 
+function AddCharacter(props) {
 
-function AddCharacter() {
-  const newCharacter = {
-    name: "",
-    role: "",
-    type: "",
-    strengths: "",
-    weaknesses: "",
-    location: "",
-  };
-  const [input, setInput] = useState(newCharacter);
-  const history = useHistory();
+  const [name, setName] = useState("")
+  const [type, setType] = useState("")
+  const [role, setRole] = useState("")
+  const [strengths, setStregths] = useState("")
+  const [weaknesses, setWeaknesses] = useState("")
+  const [location, setLocation] = useState("")
+
+  
+  const params = useParams()
+  
 
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
 
-    setInput((prevInput) => ({
-      ...prevInput,
-      [name]: value,
-    }));
-  };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const res = await axios.get(baseURL, config, input);
-    console.log(res);
-    history.push("/");
-  };
-  return (
-    <div>
-     
-      <h1>New
-        Character</h1>
-      <form className="form" onChange={handleChange} onSubmit={handleSubmit}>
-        <label> Name</label>
-        <input class Name= "input" type="text" name="name" />
-        <br />
-        <label> type</label>
-        <input class Name= "input" type="text" name="type" />
-        <br />
-        <label> Role </label>
-        <input class Name= "input" type="text" name="role" />
-        <br />
-        <label> Strengths </label>
-        <input class Name= "input" type="text" name="strengths" />
-        <br />
-        <label> Weaknesses </label>
-        <input type="text" name="weaknesses" />
-        <br />
-        <label>Character Location </label>
-        <input class Name= "input"type="text" name="location" />
-        <br />
-        <img
-            onClick={handleSubmit}
-            className="crack"
-            src="https://i.imgur.com/1Va0dQb.png"
-            alt=""
-          />
-      </form>
-    </div>
-  );
-}
-
-export default AddCharacter
-        
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const newCharacter = {
+      name: "",
+      role: "",
+      type: "",
+      strengths: "",
+      weaknesses: "",
+      location: "",
+    }
+    if (params.id) {
+      await axios.put(`{baseURL}/${params.id}`, { fields: newCharacter }, config)
       
-        
+    } else {
+      await axios.post(baseURL, { fields: newCharacter }, config)
+    }
+    props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
+  }
 
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor='name'>Name:</label>
+      <input
+        id='name'
+        type='text'
+        onChange={e => setName(e.target.value)}
+        value={name}
+      />
+      <label htmlFor='type'>Type:</label>
+      <input
+        type='text'
+        id='type'
+        onChange={e => setType(e.target.value)}
+        value={type}
+      />
+      <label htmlFor='role'>Role:</label>
+      <input
+        type='text'
+        id='role'
+        onChange={e => setRole(e.target.value)}
+        value={role}
+      />
+      <label htmlFor='location'>Location:</label>
+      <input
+        type='text'
+        id='location'
+        onChange={e => setLocation(e.target.value)}
+        value={location}
+      />
+      <label htmlFor='strengths'>Strengths:</label>
+      <textarea
+        id='strengths'
+        onChange={e => setStregths(e.target.value)}
+        value={strengths}
+      />
+      <label htmlFor='weaknesses'>Weaknesses:</label>
+      <textarea
+        id='weaknesses'
+        onChange={e => setWeaknesses(e.target.value)}
+        value={weaknesses}
+      />
+      <img
+        onClick={handleSubmit}
+        className="crack"
+        src="https://i.imgur.com/1Va0dQb.png"
+        alt="Cracked egg"
+          />
+
+    </form>
+  )
+}
+export default AddCharacter;

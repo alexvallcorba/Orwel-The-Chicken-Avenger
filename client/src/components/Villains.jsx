@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Villains(props) {
   const villains = props.characters.filter((character) => {
     console.log(character.fields.role);
-    return character.fields.role.toLowerCase() === "villain"
+    return character.fields.role === "Villain"
 
   });
   console.log(villains)
