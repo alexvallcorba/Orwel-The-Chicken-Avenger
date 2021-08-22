@@ -23,21 +23,24 @@ function AddCharacter(props) {
   const handleSubmit = async (event) => {
     event.preventDefault()
     const newCharacter = {
-      name: "",
-      role: "",
-      type: "",
-      strengths: "",
-      weaknesses: "",
-      location: "",
+      name,
+      role,
+      type,
+      strengths,
+      weaknesses,
+      location,
+      image:"https://i.imgur.com/FZyBQ1S.png"
     }
-    if (params.id) {
-      await axios.put(`{baseURL}/${params.id}`, { fields: newCharacter }, config)
+    // if (params.id) {
+    //   await axios.put(`{baseURL}/${params.id}`, { fields: newCharacter }, config)
       
-    } else {
+    // } else {
       await axios.post(baseURL, { fields: newCharacter }, config)
-    }
+    // }
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
   }
+  history.push("/");
+
 
   return (
     <form onSubmit={handleSubmit}>

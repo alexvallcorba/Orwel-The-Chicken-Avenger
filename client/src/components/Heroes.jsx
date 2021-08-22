@@ -10,6 +10,7 @@ function Heroes(props) {
 
   return (
     <>
+      <h1 className="heroesList">Heros</h1>
       <div className="character-box">
         {heroes.map((hero) => {
           return (
@@ -31,3 +32,4 @@ function Heroes(props) {
     
 
 export default Heroes;
+      

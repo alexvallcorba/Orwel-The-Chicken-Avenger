@@ -14,7 +14,7 @@ import NavBar from './components/NavBar';
 
 function App() {
   const [characters, setCharacters] = useState([])
-
+  const [toggleFetch, setToggleFetch] = useState(false)
   useEffect(() => {
     const getCharacters = async () => {
       try {
@@ -32,8 +32,9 @@ function App() {
   return (
     <article className="App">
       <Header />
-      <Route path to = "/">
       <NavBar />
+      <Route path = "/" exact>
+     
       <ReactPlayer className="video" url="https://youtu.be/uYAoxHidMqs" />
       </Route>
       <Route exact path="/heroes">
@@ -43,7 +44,7 @@ function App() {
         <Villains characters={characters} />
       </Route>
       <Route exact path="/addcharacter">
-        <AddCharacter />
+        <AddCharacter setToggleFetch = {setToggleFetch}/>
       </Route>
       <Route path="/detail/:id">
         <CharacterDetails characters={characters}/>
