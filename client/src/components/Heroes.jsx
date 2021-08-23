@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 function Heroes(props) {
   const heroes = props.characters.filter((character) => {
     console.log(character.fields.role);
-    return character.fields.role === "Hero"
+    return character.fields.role.toLowerCase() === "hero"
 
   });
   console.log(heroes)
 
   return (
     <>
-      <h1 className="heroesList">Heros</h1>
+      <h1>HEROES</h1>    
       <div className="character-box">
         {heroes.map((hero) => {
           return (

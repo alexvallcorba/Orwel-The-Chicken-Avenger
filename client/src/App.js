@@ -46,8 +46,8 @@ function App() {
       <Route exact path="/addcharacter">
         <AddCharacter setToggleFetch = {setToggleFetch}/>
       </Route>
-      <Route path="/detail/:id">
-        <CharacterDetails characters={characters}/>
+      <Route path="/characterDetails/:id">
+        <CharacterDetails characters={characters} setToggleFetch = {setToggleFetch}/>
       </Route>
       <Footer />
     </article>

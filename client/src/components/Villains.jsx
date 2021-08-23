@@ -3,28 +3,33 @@ import { Link } from "react-router-dom";
 function Villains(props) {
   const villains = props.characters.filter((character) => {
     console.log(character.fields.role);
-    return character.fields.role === "Villain"
+    return character.fields.role.toLowerCase() === "villain"
 
   });
   console.log(villains)
 
   return (
     <>
+      <h1 className="villainsList">VILLAINS</h1>
+      <div className="character-box">
         {villains.map((villain) => {
           return (
             <div key={villain.id}>
-              <Link to={`/characterdetails/${villain.id}`}></Link>
+              <Link to={`/characterDetails/${villain.id}`}>
               <img
                 className="spray"
                 src={villain.fields.spray}
                 alt="villains-spray"
-              />
+                />
+                </Link>
             </div>
           );
         })}
+        </div>
     </>
   );
 }
     
 
 export default Villains;
+      
