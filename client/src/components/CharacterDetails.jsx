@@ -8,18 +8,16 @@ function CharacterDetails(props) {
   const history = useHistory();
 
   const character = props.characters.find((character) => character.id === id);
-  console.log("Alex", character);
+  console.log(character);
 
-  if (!character.fields) {
-    return <p>...loading</p>;
-  }
+
 
   const handleDelete = async () => {
     await axios.delete(`${baseURL}/${character.id}`, config);
     props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
     history.push("/")
   };
-
+  
 
   return (
     <div>
@@ -29,14 +27,20 @@ function CharacterDetails(props) {
         src={character.fields.image}
         alt=""
       />
-      <h1 className="detailsBox">{character.fields.name}</h1>
-      <div className="paragraph">
-        <p>Type: {character.fields.type}</p>
-        <p>{character.fields.role}</p>
-        <p>Strengths: {character.fields.strengths}</p>
-        <p>Weaknesses: {character.fields.weaknesses}</p>
-        <p>Location: {character.fields.Location}</p>
-        <button onClick={handleDelete}>Delete</button>
+      <h1 className="detailsName">{character.fields.name}</h1>
+      <div className="details">
+        <p>Type:
+          {character.fields.type}</p>
+      <p>Role:
+          {character.fields.role}</p>
+        <p>Strengths:
+          {character.fields.strengths}</p>
+        <p>Weaknesses:
+          {character.fields.weaknesses}</p>
+        <p>Location:
+          {character.fields.location}</p>
+        {character.fields.mainCharacter !== "true" ? <button onClick={handleDelete}>Delete</button>
+         : null}
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ function Heroes(props) {
 
   return (
     <>
-      <h1>HEROES</h1>    
+      <h1 className="heroesList">HEROES</h1>
       <div className="character-box">
         {heroes.map((hero) => {
           return (
