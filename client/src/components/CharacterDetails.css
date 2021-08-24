@@ -1,0 +1,34 @@
+
+
+.details-container {
+  border: rgb(60, 4, 4) solid 4px;
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+}
+
+.character-image {
+  height: 375px;
+  border: white solid 4px;
+  width: 100%;
+  }
+  
+  .detailsName {
+  color: black;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 30px;
+  border: blue solid 4px;
+
+  }
+  #name-image {
+  border: yellow solid 4px;
+
+  }
+  .detailsFields {
+    color: black;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 20px;
+    border: maroon solid 4px;
+  }
+    
+  

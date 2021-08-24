@@ -25,7 +25,7 @@ function AddCharacter(props) {
       weaknesses,
       location,
       image: "https://i.imgur.com/FZyBQ1S.png",
-      spray: "https://i.imgur.com/lsiRg8P.png"
+      spray: "https://i.imgur.com/2IFjKrJ.png"
     };
     history.push("/");
     await axios.post(baseURL, { fields: newCharacter }, config);

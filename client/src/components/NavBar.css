@@ -1,3 +1,10 @@
 ul{
   list-style-type: none;
 }
+
+.nav-bar {
+  display: flex;
+  border: orchid solid 4px;
+  width: 100%;
+  justify-content: space-around;
+}

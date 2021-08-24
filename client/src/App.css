@@ -1,10 +1,23 @@
-
 .App {
-  width: 100%;
-  
+border: black solid 5px;
+display: flex;
+flex-direction: column;
+height: 100vh;
+align-items: center;
 }
 
+.header {
+  border: blue solid 4px;
+  display: flex;
+  height: 20vh;
+}
 
+.home {
+  border: white solid 4px;
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+}
 
 #root {
   background-image: url(https://i.imgur.com/FE6tJhr.png);
@@ -15,17 +28,13 @@
 
 }
   
-.orwel-logo {
-  height: auto;
-  width: clamp(150px, 100%, 350px);
- 
-}
+
 
 .links {
   height:100px;
 }
 
-.nav-bar {
+/* .nav-bar {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -33,7 +42,7 @@
   justify-content:flex-end;
   align-items:flex-start;
   align-content:space-between;
-}
+} */
 
 #link2 {
   padding-left: 100px;
@@ -41,27 +50,23 @@
 }
    
   
-.character-box {
-  display: flex;
-  flex-flow: column nowrap;
-}
+
   
-.character-image {
-height: 375px;
-}
+
 
 .video {
   margin: auto;
   border: 15px solid rgb(8, 8, 8);
   border-radius: 30px;
+  width: 50%;
   
 }
-.video-responsive {
+/* .video-responsive {
   position: relative;
   padding-bottom: 75%;
   height: 0;
   overflow: hidden;
-}
+} */
 
 .spray {
   height: 150px;
@@ -70,23 +75,8 @@ height: 375px;
 .crack {
   height:75px;
 }
-.detailsName {
-  color: black;
-  font-family: 'Allerta Stencil', sans-serif;
-  font-size: 30px;
-}
-.details {
-  color: black;
-  font-family: 'Allerta Stencil', sans-serif;
-  font-size: 20px;
-  
 
-}
 
-.footer {
-  font-family: 'Allerta Stencil', sans-serif;
-  padding-top: 40px;
-  padding-bottom: 15px;
-  text-align: center;
 
-}
+
+

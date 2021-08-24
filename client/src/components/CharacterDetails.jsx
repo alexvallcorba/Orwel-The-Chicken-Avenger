@@ -2,6 +2,7 @@ import React from "react";
 import { baseURL, config } from "../services";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
+import "./CharacterDetails.css"
 
 function CharacterDetails(props) {
   const { id } = useParams();
@@ -20,7 +21,8 @@ function CharacterDetails(props) {
   
 
   return (
-    <div>
+    <div className="details-container">
+      <div id="name-image">
       <img
         class="character-image"
         id="image"
@@ -28,10 +30,11 @@ function CharacterDetails(props) {
         alt=""
       />
       <h1 className="detailsName">{character.fields.name}</h1>
-      <div className="details">
+      </div>
+      <div className="detailsFields">
         <p>Type:
           {character.fields.type}</p>
-      <p>Role:
+        <p>Role:
           {character.fields.role}</p>
         <p>Strengths:
           {character.fields.strengths}</p>

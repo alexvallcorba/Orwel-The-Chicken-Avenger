@@ -11,6 +11,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ReactPlayer from "react-player";
 import NavBar from "./components/NavBar";
+import About from "./components/About";
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -29,13 +31,19 @@ function App() {
 
   return (
     <article className="App">
-      <Header />
-      <NavBar />
+      <div className="header">
+        <Header />
+        <NavBar />
+      </div>
+
       <Route path="/" exact>
-        <ReactPlayer className="video" url="https://youtu.be/uYAoxHidMqs" />
+        <div className="home">
+          <About />
+          <ReactPlayer className="video" url="https://youtu.be/uYAoxHidMqs" />
+        </div>
       </Route>
       <Route exact path="/heroes">
-        <Heroes characters={characters}/>
+        <Heroes characters={characters} />
       </Route>
       <Route exact path="/villains">
         <Villains characters={characters} />

@@ -1,0 +1,15 @@
+.footer-container {
+  display: flex;
+  height: 20vh;
+  width: 100%;
+  border: blue solid 4px;
+  justify-content: center;
+  align-items: center;
+
+}
+.footer {
+  font-family: 'Allerta Stencil', sans-serif;
+  border: white solid 4px;
+
+  }
+
