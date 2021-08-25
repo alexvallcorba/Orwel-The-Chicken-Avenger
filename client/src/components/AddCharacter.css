@@ -6,7 +6,7 @@
 }
 
 .formBox {
-  width: 100%;
+  width: 35%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
@@ -26,5 +26,10 @@ input {
 
 }
 
-
+.boxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+}
 

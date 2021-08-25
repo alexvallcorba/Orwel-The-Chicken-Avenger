@@ -1,17 +1,18 @@
 .orwel-logo {
   height: 100%;
   width: 95%;
-  border: black solid 4px;
+  /* border: black solid 4px; */
 
 }
 .header-logo {
   width: 20%;
-  border: #ffffff solid 4px;
+  /* border: #ffffff solid 4px; */
 }
 
-/* @media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 480px) {
   .header-logo{
     flex-direction: column;
+    align-items: center;
   }
   
-} */
+}
