@@ -20,14 +20,10 @@
   font-family: 'Allerta Stencil', sans-serif;
   font-size: 30px;
   border: blue solid 4px;
-  align-items: center;
+  font-display: center;
 }
   
-#name-image {
-  border: yellow solid 4px;
-  height: 100%;
 
-  }
   .detailsFields {
     color: black;
     font-family: 'Allerta Stencil', sans-serif;

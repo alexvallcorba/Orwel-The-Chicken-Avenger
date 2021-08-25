@@ -1,10 +1,18 @@
 .formBox {
-
-    border: white solid 4px;
-    
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-    
-
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #9b9b9b;
 }
+
+
+  /* .inputColor {
+  background-color: orange;
+
+
+  } */
+
