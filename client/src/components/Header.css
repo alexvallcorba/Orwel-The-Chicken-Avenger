@@ -8,3 +8,10 @@
   width: 20%;
   border: #ffffff solid 4px;
 }
+
+/* @media screen and (max-device-width: 480px) {
+  .header-logo{
+    flex-direction: column;
+  }
+  
+} */

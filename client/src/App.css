@@ -1,11 +1,13 @@
 .App {
-  border: black solid 5px;
+  border: black solid 7px;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
   align-items: center;
 }
+
+
 
 .header {
   border: blue solid 4px;
@@ -20,29 +22,33 @@
   justify-content: space-around;
 }
 
-#root {
-  background-image: url(https://i.imgur.com/FE6tJhr.png);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
+
 
 .links {
   height: 100px;
 }
 
 .video {
-  margin: auto;
-  border: 15px solid rgb(8, 8, 8);
-  border-radius: 30px;
+  border: 15px solid black;
+  border-radius: 15px;
   width: 50%;
+  height: 90%;
+  
 }
 
 .spray {
-  height: 150px;
-}
+  height: 275px;}
 
 .crack {
   height: 75px;
 }
+
+
+
+@media screen and (max-device-width: 480px) {
+  .home{
+    flex-direction: column;
+  }
+  
+}
+

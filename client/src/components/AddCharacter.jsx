@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
 import "./AddCharacter.css";
 
+
 function AddCharacter(props) {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
@@ -35,7 +36,7 @@ function AddCharacter(props) {
   };
 
   return (
-    <div>
+    <div className="boxContainer">
       <h1 className="FormTitle">CREATE NEW CHARACTER</h1>
 
       <form className="formBox" onSubmit={handleSubmit}>

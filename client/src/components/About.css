@@ -5,3 +5,9 @@
   width: 40%;
   border: maroon 4px solid;
 }
+
+@media screen and (max-device-width: 480px) {
+  .about{
+width: 100%;  }
+  
+}

@@ -42,35 +42,49 @@ function CharacterDetails(props) {
       </div>
       <div className="detailsFields">
         <p>
-          Type:
+          TYPE:
+          <br />
           {character.fields.type}
         </p>
-        <br />
+       
         <p>
-          Role:
+          ROLE:
+          <br />
+        
           {character.fields.role}
         </p>
-        <br />
         <p>
-          Strengths:
+          STRENGTHS:
+          <br />
+        
           {character.fields.strengths}
         </p>
-        <br />
         <p>
-          Weaknesses:
+          WEAKNESSES:
+          <br />
+        
           {character.fields.weaknesses}
         </p>
-        <br />
         <p>
-          Location:
+          LOCATION:
+          <br />
+        
           {character.fields.location}
         </p>
         {character.fields.mainCharacter !== "true" ? (
-          <img
+        
+        //   <motion.div
+        //   whileHover={{
+        //     scale: 1.2,
+        //     transition: { duration: 0.5 },
+        //   }}
+        // >
+           <img
             className="trashCan"
             src="https://i.imgur.com/EArYeyj.png"
             onClick={handleDelete}
           />
+        //  </motion.div>
         ) : null}
       </div>
     </div>

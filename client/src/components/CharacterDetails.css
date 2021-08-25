@@ -17,7 +17,7 @@
   
   .detailsName {
   color: black;
-  font-family: 'Allerta Stencil', sans-serif;
+  font-family: 'Permanent Marker', cursive;  
   font-size: 30px;
   border: blue solid 4px;
   font-display: center;
@@ -26,17 +26,22 @@
 
   .detailsFields {
     color: black;
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Permanent Marker', cursive;  
     font-size: 20px;
     border: maroon solid 4px;
     align-items: center; 
     
   }
 
-  .trashCan {
+.trashCan {
     border: rgb(43, 0, 128) solid 4px;
     height: 20%;
-
   }
+/* .trashCan :hover {
+  transform: scale(1.5); */
+
+/* } */
+
+  
     
   
