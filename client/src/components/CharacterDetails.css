@@ -13,6 +13,7 @@
   height: 375px;
   border: white solid 4px;
   width: 100%;
+  margin-top: 25px;
   }
   
   .detailsName {
@@ -37,10 +38,7 @@
     border: rgb(43, 0, 128) solid 4px;
     height: 20%;
   }
-/* .trashCan :hover {
-  transform: scale(1.5); */
 
-/* } */
 
   
     

@@ -98,6 +98,8 @@ function AddCharacter(props) {
           src="https://i.imgur.com/1Va0dQb.png"
           alt="Cracked egg"
         />
+        <br />
+
       </form>
     </div>
   );
