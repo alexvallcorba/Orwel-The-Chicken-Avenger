@@ -40,7 +40,6 @@ function AddCharacter(props) {
       <h1 className="FormTitle">CREATE NEW CHARACTER</h1>
 
       <form className="formBox" onSubmit={handleSubmit}>
-        {/* <label htmlFor="name">Name:</label> */}
         <input
           className="inputColor"
           placeholder="New character's name"
@@ -50,7 +49,6 @@ function AddCharacter(props) {
           value={name}
         />
         <br />
-        {/* <label htmlFor="type">Type:</label> */}
         <input
           className="inputColor"
           placeholder="Type"
@@ -60,7 +58,6 @@ function AddCharacter(props) {
           value={type}
         />
         <br />
-        {/* <label htmlFor="role">Role:</label> */}
         <input
           className="inputColor"
           placeholder="Hero or Villain"
@@ -70,7 +67,6 @@ function AddCharacter(props) {
           value={role}
         />
         <br />
-        {/* <label htmlFor="location">Location:</label> */}
         <input
           className="inputColor"
           placeholder="Location"
@@ -80,7 +76,6 @@ function AddCharacter(props) {
           value={location}
         />
         <br />
-        {/* <label htmlFor="strengths">Strengths:</label> */}
         <textarea
           className="inputColor"
           placeholder="Character's Strengths"
@@ -89,7 +84,6 @@ function AddCharacter(props) {
           value={strengths}
         />
         <br />
-        {/* <label htmlFor="weaknesses">Weaknesses:</label> */}
         <textarea
           className="inputColor"
           placeholder="Character's Weaknesses"
