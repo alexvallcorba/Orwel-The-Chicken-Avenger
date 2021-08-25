@@ -42,7 +42,11 @@ function CharacterDetails(props) {
           {character.fields.weaknesses}</p>
         <p>Location:
           {character.fields.location}</p>
-        {character.fields.mainCharacter !== "true" ? <button onClick={handleDelete}>Delete</button>
+        {character.fields.mainCharacter !== "true" ?
+          <img
+          className="trashCan"
+          src="https://i.imgur.com/EArYeyj.png"
+          onClick={handleDelete}/>
          : null}
       </div>
     </div>

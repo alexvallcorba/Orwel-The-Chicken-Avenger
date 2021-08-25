@@ -32,8 +32,8 @@ function App() {
   return (
     <article className="App">
       <div className="header">
-        <Header />
-        <NavBar />
+        <Header className="header"/>
+        <NavBar className="navBar"/>
       </div>
 
       <Route path="/" exact>

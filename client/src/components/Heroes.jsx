@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import "./Heroes.css"
+
 
 function Heroes(props) {
   const heroes = props.characters.filter((character) => {

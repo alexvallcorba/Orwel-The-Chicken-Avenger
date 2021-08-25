@@ -3,6 +3,7 @@
 .details-container {
   border: rgb(60, 4, 4) solid 4px;
   display: flex;
+  height: 100%;
   width: 95%;
   justify-content: space-around;
 
@@ -24,6 +25,7 @@
   
 #name-image {
   border: yellow solid 4px;
+  height: 100%;
 
   }
   .detailsFields {
@@ -33,6 +35,12 @@
     border: maroon solid 4px;
     align-items: center; 
     
+  }
+
+  .trashCan {
+    border: rgb(43, 0, 128) solid 4px;
+    height: 10%;
+
   }
     
   
