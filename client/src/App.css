@@ -1,9 +1,10 @@
 .App {
-border: black solid 5px;
-display: flex;
-flex-direction: column;
-height: 100vh;
-align-items: center;
+  border: black solid 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
 }
 
 .header {
@@ -24,65 +25,24 @@ align-items: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:  center center;
-
+  background-position: center center;
 }
-  
-
 
 .links {
-  height:100px;
+  height: 100px;
 }
-
-
-#link2 {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-   
-  
-
-  
-
 
 .video {
   margin: auto;
   border: 15px solid rgb(8, 8, 8);
   border-radius: 30px;
   width: 50%;
-  
 }
 
 .spray {
-  height: 150px;
+  height: 225px;
 }
 
 .crack {
-  height:75px;
+  height: 75px;
 }
-
-
-
-/* @media screen and (min-device-width: 480px) {
-  .header
-  .nav-bar,
-  .character-box {
-    flex-flow: row wrap;
-  }
-  .nav-bar > li {
-    flex-grow: 1;
-  }
-  .header {
-    flex-grow: 1;
-  }
-  .character-box > * {
-    flex-grow: 1;
-  }
-
-
-} */
-
-
-
-
-

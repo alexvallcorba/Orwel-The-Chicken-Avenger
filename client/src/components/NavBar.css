@@ -8,3 +8,21 @@ ul{
   width: 100%;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 480px)  {
+
+  .nav-bar{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  .links{
+    width: 50%;
+    height: 25%;
+    border: black solid 4px;
+    justify-content: space-around; 
+
+
+  }
+}

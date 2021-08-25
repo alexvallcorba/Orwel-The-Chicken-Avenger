@@ -3,6 +3,8 @@ import { baseURL, config } from "../services";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import "./CharacterDetails.css"
+import { motion } from "framer-motion";
+
 
 function CharacterDetails(props) {
   const { id } = useParams();
@@ -23,12 +25,24 @@ function CharacterDetails(props) {
   return (
     <div className="details-container">
       <div id="name-image">
-      <img
+      
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 230,
+          damping: 100,
+        }}
+      >
+        <img
         class="character-image"
         id="image"
         src={character.fields.image}
         alt=""
-      />
+        />
+      </motion.div>
+
       <h1 className="detailsName">{character.fields.name}</h1>
       </div>
       <div className="detailsFields">

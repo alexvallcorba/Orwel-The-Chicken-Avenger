@@ -1,0 +1,10 @@
+.formBox {
+
+    border: white solid 4px;
+    
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+    
+
+}

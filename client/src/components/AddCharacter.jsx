@@ -3,6 +3,7 @@ import { baseURL, config } from "../services";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
+import "./AddCharacter.css"
 
 function AddCharacter(props) {
   const [name, setName] = useState("");
@@ -35,8 +36,8 @@ function AddCharacter(props) {
   
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>CREATE NEW CHARACTER</h1>
+    <form className="formBox" onSubmit={handleSubmit}>
+      <h1 className="FormTitle">CREATE NEW CHARACTER</h1>
       <label htmlFor="name">Name:</label>
       <input
         id="name"

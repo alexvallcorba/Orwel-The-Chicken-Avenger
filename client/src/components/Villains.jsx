@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import "./Villains.css"
+import { motion } from "framer-motion";
+
 
 function Villains(props) {
   const villains = props.characters.filter((character) => {
@@ -16,11 +19,21 @@ function Villains(props) {
           return (
             <div key={villain.id}>
               <Link to={`/characterDetails/${villain.id}`}>
-              <img
-                className="spray"
-                src={villain.fields.spray}
-                alt="villains-spray"
-                />
+              <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ rotate: 360, scale: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 115,
+                      damping: 20,
+                    }}
+                  >
+                    <img
+                      className="spray"
+                      src={villain.fields.spray}
+                      alt="orwell-spray"
+                    />
+                  </motion.div>
                 </Link>
             </div>
           );

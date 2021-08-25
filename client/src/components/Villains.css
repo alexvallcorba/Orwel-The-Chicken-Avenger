@@ -1,0 +1,6 @@
+.character-box {
+  border: rgb(255, 255, 255) solid 4px;
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+}

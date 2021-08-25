@@ -17,6 +17,7 @@ import About from "./components/About";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const [matches, setMatches] = useState(window.matchMedia("(min-width: 480px)").matches)
   useEffect(() => {
     const getCharacters = async () => {
       try {
@@ -29,11 +30,17 @@ function App() {
     getCharacters();
   }, [toggleFetch]);
 
+  useEffect(() => {
+    const handler = (e) => setMatches( e.matches );
+    window.matchMedia("(min-width: 480px)").addListener(handler);
+  }, [])
+
   return (
     <article className="App">
       <div className="header">
-        <Header className="header"/>
-        <NavBar className="navBar"/>
+        <Header className="header" />
+        {matches ? <NavBar />  : ""}
+        
       </div>
 
       <Route path="/" exact>
@@ -57,6 +64,8 @@ function App() {
           setToggleFetch={setToggleFetch}
         />
       </Route>
+      {!matches ? <NavBar />  : ""}
+
       <Footer />
     </article>
   );

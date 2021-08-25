@@ -1,9 +1,10 @@
 .orwel-logo {
   height: 100%;
-  width: 50%;
+  width: 95%;
+  border: black solid 4px;
 
 }
 .header-logo {
-  width: 50%;
+  width: 20%;
   border: #ffffff solid 4px;
 }

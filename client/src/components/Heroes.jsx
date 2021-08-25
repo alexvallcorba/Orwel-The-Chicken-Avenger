@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Heroes.css"
+import { motion } from "framer-motion";
+
 
 
 function Heroes(props) {
@@ -18,11 +20,21 @@ function Heroes(props) {
           return (
             <div key={hero.id}>
               <Link to={`/characterDetails/${hero.id}`}>
-              <img
-                className="spray"
-                src={hero.fields.spray}
-                alt="heroes-spray"
-                />
+              <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ rotate: 360, scale: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 115,
+                      damping: 20,
+                    }}
+                  >
+                    <img
+                      className="spray"
+                      src={hero.fields.spray}
+                      alt="orwell-spray"
+                    />
+                  </motion.div>
                 </Link>
             </div>
           );
