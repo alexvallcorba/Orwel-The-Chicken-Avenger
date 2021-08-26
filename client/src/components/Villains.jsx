@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 import "./Villains.css"
 import { motion } from "framer-motion";
-
+import Spray from "../services/sounds/spray_can.wav";
+import { useEffect } from "react";
 
 function Villains(props) {
+  let audio = new Audio(Spray);
+
   const villains = props.characters.filter((character) => {
     console.log(character.fields.role);
     return character.fields.role.toLowerCase() === "villain"
 
   });
   console.log(villains)
+  
+  useEffect(() => {
+    audio.play();
+  }, [])
 
   return (
     <>

@@ -3,9 +3,11 @@
   font-size: 25px;
   color: white;
   width: 40%;
-  border: maroon 4px solid;
+  /* border: maroon 4px solid; */
 }
-
+#about {
+  color: black;
+}
 @media screen and (max-device-width: 480px) {
   .about{
 width: 100%;  }

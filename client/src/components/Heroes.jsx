@@ -1,16 +1,24 @@
 import { Link } from "react-router-dom";
 import "./Heroes.css"
 import { motion } from "framer-motion";
+import Spray from "../services/sounds/spray_can.wav";
+import { useEffect } from "react";
 
 
 
 function Heroes(props) {
+  let audio = new Audio(Spray);
+
   const heroes = props.characters.filter((character) => {
     console.log(character.fields.role);
     return character.fields.role.toLowerCase() === "hero"
 
   });
   console.log(heroes)
+  
+  useEffect(() => {
+    audio.play();
+  }, [])
 
   return (
     <>

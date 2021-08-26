@@ -1,6 +1,13 @@
 .character-box {
-  border: white solid 4px;
+  /* border: white solid 4px; */
   display: flex;
   width: 95%;
   justify-content: space-around;
+}
+
+.heroesList {
+  font-family: 'Permanent Marker', cursive; 
+  font-size: 50px; 
+  color: black;
+
 }

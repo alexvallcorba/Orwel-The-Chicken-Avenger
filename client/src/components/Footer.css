@@ -2,14 +2,16 @@
   display: flex;
   height: 20vh;
   width: 100%;
-  border: blue solid 4px;
+  /* border: blue solid 4px; */
   justify-content: center;
   align-items: center;
 
 }
 .footer {
-  font-family: 'Allerta Stencil', sans-serif;
-  border: white solid 4px;
+  font-family: 'Permanent Marker', cursive;  
+  /* border: white solid 4px; */
+  font-size: 25px;
+  color: rgb(108, 0, 0);
 
   }
 

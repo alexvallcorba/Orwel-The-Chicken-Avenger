@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { baseURL, config } from "../services";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
 import "./AddCharacter.css";
+import { motion } from "framer-motion";
+import Zoom from "../services/sounds/zoom.wav";
+
 
 
 function AddCharacter(props) {
@@ -16,6 +19,12 @@ function AddCharacter(props) {
 
   const params = useParams();
   const history = useHistory();
+  let audio = new Audio(Zoom);
+
+  useEffect(() => {
+    audio.play();
+  }, [])
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -37,7 +46,23 @@ function AddCharacter(props) {
 
   return (
     <div className="boxContainer">
-      <h1 className="FormTitle">CREATE NEW CHARACTER</h1>
+      <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 230,
+            damping: 100,
+          }}
+        >
+           <img
+          id=""
+          src="https://i.imgur.com/liRA4fH.png"
+          className="buble"
+          alt="buble-graffiti "
+        />
+        </motion.div>
+     
 
       <form className="formBox" onSubmit={handleSubmit}>
         <input

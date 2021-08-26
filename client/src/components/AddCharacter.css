@@ -1,19 +1,16 @@
 
 
-.FormTitle {
-    font-family: 'Permanent Marker', cursive;  
 
-}
 
 .formBox {
-  width: 35%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
   border-radius: 4px;
   box-sizing: border-box;
   text-align: center;
-  background-color: #9b9b9b;
+  /* background-color: #9b9b9b; */
   cursor: pointer;
 }
 
@@ -31,5 +28,9 @@ input {
   flex-direction: row;
   justify-content: space-evenly;
   width: 80%;
+  align-items: center;
+  margin-top: 15px;
 }
-
+.buble {
+  width:70%;
+}

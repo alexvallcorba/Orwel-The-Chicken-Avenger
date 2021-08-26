@@ -1,5 +1,5 @@
 .App {
-  border: black solid 7px;
+  /* border: black solid 7px; */
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -8,13 +8,13 @@
 }
 
 .header {
-  border: blue solid 4px;
+  /* border: blue solid 4px; */
   display: flex;
   height: 20vh;
 }
 
 .home {
-  border: white solid 4px;
+  /* border: white solid 4px; */
   display: flex;
   width: 95%;
   justify-content: space-around;

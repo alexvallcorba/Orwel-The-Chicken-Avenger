@@ -4,13 +4,26 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import "./CharacterDetails.css";
 import { motion } from "framer-motion";
+import Bird from "../services/sounds/bass.wav";
+import { useEffect } from "react";
+
+
+
 
 function CharacterDetails(props) {
   const { id } = useParams();
   const history = useHistory();
+  let audio = new Audio(Bird);
 
   const character = props.characters.find((character) => character.id === id);
   console.log(character);
+
+  useEffect(() => {
+    audio.play();
+  }, [])
+    
+    
+    
 
   const handleDelete = async () => {
     await axios.delete(`${baseURL}/${character.id}`, config);
