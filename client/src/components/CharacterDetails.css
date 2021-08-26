@@ -1,7 +1,7 @@
 
 
 .details-container {
-  /* border: rgb(60, 4, 4) solid 4px; */
+  border: rgb(60, 4, 4) solid 4px;
   display: flex;
   height: 100%;
   width: 95%;
@@ -12,6 +12,7 @@
 .character-image {
   height: 325px;
   margin-top: 25px;
+  margin-left: 100px;
   }
   
   .detailsName {
@@ -26,16 +27,23 @@
     color: black;
     font-family: 'Permanent Marker', cursive;  
     font-size: 20px;
-    /* border: maroon solid 4px; */
+    margin-left: 200px;    
     align-items: center; 
-    width: 25%;
+    width: 40%;
     
   }
 
-.trashCan {
-    /* border: rgb(43, 0, 128) solid 4px; */
-    height: 20%;
-  }
+ .trashCan {
+  height: 125px;
+  /* width: 30%; */
+    /* height: 100%; */
+    margin-top: 135px;
+  } 
+  /* .trash {
+    width: 30%;
+    height: 100%;
+    margin-top: 135px;
+  } */
 
 
   

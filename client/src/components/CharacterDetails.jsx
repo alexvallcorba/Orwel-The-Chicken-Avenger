@@ -4,8 +4,12 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import "./CharacterDetails.css";
 import { motion } from "framer-motion";
-import Bird from "../services/sounds/bass.wav";
-import { useEffect } from "react";
+// import Bird from "../services/sounds/bass.wav";
+// import { useEffect } from "react";
+// import Explosion from "../services/sounds/explosion1.wav";
+// import useSound from "use-sound";
+
+
 
 
 
@@ -13,14 +17,15 @@ import { useEffect } from "react";
 function CharacterDetails(props) {
   const { id } = useParams();
   const history = useHistory();
-  let audio = new Audio(Bird);
+  // const [play] = useSound(Explosion);
+
 
   const character = props.characters.find((character) => character.id === id);
   console.log(character);
 
-  useEffect(() => {
-    audio.play();
-  }, [])
+  // useEffect(() => {
+    
+  // }, [])
     
     
     
@@ -84,22 +89,29 @@ function CharacterDetails(props) {
         
           {character.fields.location}
         </p>
+        </div>
+        <div className="trash" >
         {character.fields.mainCharacter !== "true" ? (
         
-        //   <motion.div
-        //   whileHover={{
-        //     scale: 1.2,
-        //     transition: { duration: 0.5 },
-        //   }}
-        // >
+          <motion.div
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 0.5 },
+          }}
+        >
            <img
             className="trashCan"
             src="https://i.imgur.com/EArYeyj.png"
             onClick={handleDelete}
+            // onClick={() => {
+            //   play()
+              
+            // }}
           />
-        //  </motion.div>
-        ) : null}
-      </div>
+         </motion.div>
+          ) : null}
+          </div>
+      
     </div>
   );
 }

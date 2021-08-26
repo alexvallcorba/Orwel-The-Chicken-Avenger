@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
 import "./AddCharacter.css";
 import { motion } from "framer-motion";
-import Zoom from "../services/sounds/zoom.wav";
+// import Zoom from "../services/sounds/zoom.wav";
 
 
 
@@ -19,11 +19,11 @@ function AddCharacter(props) {
 
   const params = useParams();
   const history = useHistory();
-  let audio = new Audio(Zoom);
+  // let audio = new Audio(Zoom);
 
-  useEffect(() => {
-    audio.play();
-  }, [])
+  // useEffect(() => {
+  //   audio.play();
+  // }, [])
 
 
   const handleSubmit = async (event) => {
