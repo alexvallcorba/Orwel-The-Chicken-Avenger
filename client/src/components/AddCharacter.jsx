@@ -90,6 +90,7 @@ function AddCharacter(props) {
           id="role"
           onChange={(e) => setRole(e.target.value)}
           value={role}
+          required
         />
         <br />
         <input
@@ -117,12 +118,12 @@ function AddCharacter(props) {
           value={weaknesses}
         />
         <br />
-        <img
-          onClick={handleSubmit}
+        <input type="image" border= "0"
+          // onClick={handleSubmit}
           className="crack"
           src="https://i.imgur.com/1Va0dQb.png"
           alt="Cracked egg"
-        />
+          />
         <br />
 
       </form>
