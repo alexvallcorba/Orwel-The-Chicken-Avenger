@@ -3,10 +3,9 @@
   font-size: 25px;
   color: white;
   width: 40%;
-  /* border: maroon 4px solid; */
 }
 #about {
-  color: rgb(255, 255, 0);
+  color: rgb(37, 42, 91);
 }
 @media screen and (max-device-width: 480px) {
   .about{

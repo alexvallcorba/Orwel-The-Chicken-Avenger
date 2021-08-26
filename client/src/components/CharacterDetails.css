@@ -3,18 +3,28 @@
   height: 80%;
   width: 95%;
   justify-content: space-around;
+  border: white solid 4px;
 }
 
 .character-image {
   height: 325px;
   margin-top: 25px;
-  margin-left: 150px;
+  
+
 }
 
+.image-container {
+  border: black solid 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .detailsName {
-  color: rgb(0, 0, 0);
+  color:  rgb(37, 42, 91);
   font-family: "Permanent Marker", cursive;
   font-size: 50px;
+  border: peru solid 4px;
+  text-align: center;
 }
 
 h3 {
@@ -22,12 +32,17 @@ h3 {
 }
 
 .detailsFields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
   color: white;
   font-family: "Permanent Marker", cursive;
   font-size: 18px;
-  margin-left: 200px;
   align-items: center;
-  width: 40%;
+  width: 50%;
+  height: 100%;
+  border: orchid solid 5px;
 }
 
 .trashCan {

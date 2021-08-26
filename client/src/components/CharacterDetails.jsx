@@ -25,7 +25,7 @@ function CharacterDetails(props) {
 
   return (
     <div className="details-container">
-      <div id="name-image">
+      <div className="image-container">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -42,46 +42,46 @@ function CharacterDetails(props) {
             alt=""
           />
         </motion.div>
+      <h1 className="detailsName">{character.fields.name}</h1>
 
-        <h1 className="detailsName">{character.fields.name}</h1>
       </div>
       <div className="detailsFields">
-        <p  >
+        <p>
           <h3>TYPE:</h3>
           {character.fields.type}
         </p>
         <p>
-        <h3>ROLE:</h3>
+          <h3>ROLE:</h3>
           {character.fields.role}
         </p>
         <p>
-        <h3>STRENGTHS:</h3>
+          <h3>STRENGTHS:</h3>
           {character.fields.strengths}
         </p>
         <p>
-        <h3>WEAKNESSES:</h3>
+          <h3>WEAKNESSES:</h3>
           {character.fields.weaknesses}
         </p>
         <p>
-        <h3>LOCATION:</h3>
+          <h3>LOCATION:</h3>
           {character.fields.location}
         </p>
-        <div className="TrashPosition" >
-        {character.fields.mainCharacter !== "true" ? (
-          <motion.div
-            whileHover={{
-              scale: 1.2,
-              transition: { duration: 0.5 },
-            }}
-          >
-            <img
-              className="trashCan"
-              src="https://i.imgur.com/EArYeyj.png"
-              onClick={handleDelete}
-            />
-          </motion.div>
+        <div className="TrashPosition">
+          {character.fields.mainCharacter !== "true" ? (
+            <motion.div
+              whileHover={{
+                scale: 1.3,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <img
+                className="trashCan"
+                src="https://i.imgur.com/EArYeyj.png"
+                onClick={handleDelete}
+              />
+            </motion.div>
           ) : null}
-          </div>
+        </div>
       </div>
     </div>
   );
