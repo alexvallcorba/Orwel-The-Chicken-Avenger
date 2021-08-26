@@ -1,46 +1,49 @@
-
-
 .details-container {
   display: flex;
-  height: 100%;
+  height: 80%;
   width: 95%;
   justify-content: space-around;
-
 }
 
 .character-image {
   height: 325px;
   margin-top: 25px;
   margin-left: 150px;
-  }
-  
-  .detailsName {
-  color: black;
-  font-family: 'Permanent Marker', cursive;  
-  font-size: 50px;
-
 }
-  
 
-  .detailsFields {
-    color: black;
-    font-family: 'Permanent Marker', cursive;  
-    font-size: 20px;
-    margin-left: 200px;    
-    align-items: center; 
-    width: 40%;
-    
-  }
+.detailsName {
+  color: rgb(0, 0, 0);
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
+}
 
- .trashCan {
+h3 {
+  color: rgb(242, 255, 0);
+}
+
+.detailsFields {
+  color: white;
+  font-family: "Permanent Marker", cursive;
+  font-size: 18px;
+  margin-left: 200px;
+  align-items: center;
+  width: 40%;
+}
+
+.trashCan {
   height: 125px;
-  } 
+}
 .trashPosition {
   width: 30%;
 }
 
-
-
-  
-    
-  
+@media screen and (max-width: 480px) {
+  .details-container
+   {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+}

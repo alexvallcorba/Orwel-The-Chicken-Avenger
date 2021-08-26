@@ -6,7 +6,7 @@
   /* border: maroon 4px solid; */
 }
 #about {
-  color: black;
+  color: rgb(255, 255, 0);
 }
 @media screen and (max-device-width: 480px) {
   .about{

@@ -4,7 +4,6 @@ ul {
 
 .nav-bar {
   display: flex;
-  /* border: orchid solid 4px; */
   width: 100%;
   justify-content: space-around;
 }
@@ -20,6 +19,5 @@ ul {
   .links {
     width: 50%;
     height: 25%;
-    /* border: black solid 2px; */
   }
 }

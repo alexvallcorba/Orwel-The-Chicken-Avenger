@@ -46,30 +46,24 @@ function CharacterDetails(props) {
         <h1 className="detailsName">{character.fields.name}</h1>
       </div>
       <div className="detailsFields">
-        <p>
-          TYPE:
-          <br />
+        <p  >
+          <h3>TYPE:</h3>
           {character.fields.type}
         </p>
-
         <p>
-          ROLE:
-          <br />
+        <h3>ROLE:</h3>
           {character.fields.role}
         </p>
         <p>
-          STRENGTHS:
-          <br />
+        <h3>STRENGTHS:</h3>
           {character.fields.strengths}
         </p>
         <p>
-          WEAKNESSES:
-          <br />
+        <h3>WEAKNESSES:</h3>
           {character.fields.weaknesses}
         </p>
         <p>
-          LOCATION:
-          <br />
+        <h3>LOCATION:</h3>
           {character.fields.location}
         </p>
         <div className="TrashPosition" >

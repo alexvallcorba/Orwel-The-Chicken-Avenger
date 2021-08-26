@@ -66,7 +66,7 @@ function AddCharacter(props) {
 
       <form className="formBox" onSubmit={handleSubmit}>
         <input
-          className="inputColor"
+          className="inputSize"
           placeholder="New character's name"
           id="name"
           type="text"
@@ -75,7 +75,7 @@ function AddCharacter(props) {
         />
         <br />
         <input
-          className="inputColor"
+          className="inputSize"
           placeholder="Type"
           type="text"
           id="type"
@@ -84,7 +84,7 @@ function AddCharacter(props) {
         />
         <br />
         <input
-          className="inputColor"
+          className="inputSize"
           placeholder="Hero or Villain"
           type="text"
           id="role"
@@ -94,7 +94,7 @@ function AddCharacter(props) {
         />
         <br />
         <input
-          className="inputColor"
+          className="inputSize"
           placeholder="Location"
           type="text"
           id="location"
@@ -103,7 +103,7 @@ function AddCharacter(props) {
         />
         <br />
         <textarea
-          className="inputColor"
+          className="inputSize"
           placeholder="Character's Strengths"
           id="strengths"
           onChange={(e) => setStregths(e.target.value)}
@@ -111,7 +111,7 @@ function AddCharacter(props) {
         />
         <br />
         <textarea
-          className="inputColor"
+          className="inputSize"
           placeholder="Character's Weaknesses"
           id="weaknesses"
           onChange={(e) => setWeaknesses(e.target.value)}

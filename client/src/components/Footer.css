@@ -2,16 +2,19 @@
   display: flex;
   height: 20vh;
   width: 100%;
-  /* border: blue solid 4px; */
   justify-content: center;
   align-items: center;
-
 }
 .footer {
-  font-family: 'Permanent Marker', cursive;  
-  /* border: white solid 4px; */
-  font-size: 25px;
-  color: rgb(108, 0, 0);
+  font-family: "Permanent Marker", cursive;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
 
+@media screen and (max-device-width: 480px) {
+  .footer-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
   }
-
+}
