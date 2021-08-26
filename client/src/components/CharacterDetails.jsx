@@ -4,35 +4,22 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import "./CharacterDetails.css";
 import { motion } from "framer-motion";
-// import Bird from "../services/sounds/bass.wav";
-// import { useEffect } from "react";
-// import Explosion from "../services/sounds/explosion1.wav";
-// import useSound from "use-sound";
-
-
-
-
-
+import { useEffect } from "react";
+import Explosion from "../services/sounds/explosion1.wav";
 
 function CharacterDetails(props) {
   const { id } = useParams();
   const history = useHistory();
-  // const [play] = useSound(Explosion);
-
 
   const character = props.characters.find((character) => character.id === id);
   console.log(character);
 
-  // useEffect(() => {
-    
-  // }, [])
-    
-    
-    
+  let audio = new Audio(Explosion);
 
   const handleDelete = async () => {
     await axios.delete(`${baseURL}/${character.id}`, config);
     props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
+    audio.play();
     history.push("/");
   };
 
@@ -64,54 +51,44 @@ function CharacterDetails(props) {
           <br />
           {character.fields.type}
         </p>
-       
+
         <p>
           ROLE:
           <br />
-        
           {character.fields.role}
         </p>
         <p>
           STRENGTHS:
           <br />
-        
           {character.fields.strengths}
         </p>
         <p>
           WEAKNESSES:
           <br />
-        
           {character.fields.weaknesses}
         </p>
         <p>
           LOCATION:
           <br />
-        
           {character.fields.location}
         </p>
-        </div>
-        <div className="trash" >
+        <div className="TrashPosition" >
         {character.fields.mainCharacter !== "true" ? (
-        
           <motion.div
-          whileHover={{
-            scale: 1.3,
-            transition: { duration: 0.5 },
-          }}
-        >
-           <img
-            className="trashCan"
-            src="https://i.imgur.com/EArYeyj.png"
-            onClick={handleDelete}
-            // onClick={() => {
-            //   play()
-              
-            // }}
-          />
-         </motion.div>
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.5 },
+            }}
+          >
+            <img
+              className="trashCan"
+              src="https://i.imgur.com/EArYeyj.png"
+              onClick={handleDelete}
+            />
+          </motion.div>
           ) : null}
           </div>
-      
+      </div>
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Heroes.css"
 import { motion } from "framer-motion";
-// import Spray from "../services/sounds/spray_can.wav";
-// import { useEffect } from "react";
+import Spray from "../services/sounds/spray_can.wav";
+import { useEffect } from "react";
 
 
 
 function Heroes(props) {
-  // let audio = new Audio(Spray);
+  let audio = new Audio(Spray);
 
   const heroes = props.characters.filter((character) => {
     console.log(character.fields.role);
@@ -16,9 +16,9 @@ function Heroes(props) {
   });
   console.log(heroes)
   
-  // useEffect(() => {
-  //   audio.play();
-  // }, [])
+  useEffect(() => {
+    audio.play();
+  }, [])
 
   return (
     <>

@@ -11,7 +11,7 @@
 .character-image {
   height: 325px;
   margin-top: 25px;
-  margin-left: 100px;
+  margin-left: 150px;
   }
   
   .detailsName {
@@ -34,15 +34,11 @@
 
  .trashCan {
   height: 125px;
-  /* width: 30%; */
-    /* height: 100%; */
-    margin-top: 135px;
   } 
-  /* .trash {
-    width: 30%;
-    height: 100%;
-    margin-top: 135px;
-  } */
+.trashPosition {
+  width: 30%;
+}
+
 
 
   
