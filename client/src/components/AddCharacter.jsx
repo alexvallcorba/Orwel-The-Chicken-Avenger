@@ -17,7 +17,7 @@ function AddCharacter(props) {
 
   const params = useParams();
   const history = useHistory();
-  // let audio = new Audio(Zoom);
+  let audio = new Audio(Zoom);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,7 +32,7 @@ function AddCharacter(props) {
       spray: "https://i.imgur.com/2IFjKrJ.png",
     };
     history.push("/");
-    // audio.play();
+    audio.play();
 
     await axios.post(baseURL, { fields: newCharacter }, config);
     props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
@@ -76,7 +76,6 @@ function AddCharacter(props) {
           value={type}
         />
         <br />
-        
 
         <input
           className="inputSize"
@@ -85,7 +84,7 @@ function AddCharacter(props) {
           id="role"
           onChange={(e) => setRole(e.target.value)}
           value={role}
-          required 
+          required
         />
         <br />
         <input
@@ -113,14 +112,22 @@ function AddCharacter(props) {
           value={weaknesses}
         />
         <br />
-        <input
-          type="image"
-          border="0"
-          // onClick={handleSubmit}
-          className="crack"
-          src="https://i.imgur.com/1Va0dQb.png"
-          alt="Cracked egg"
-        />
+
+        <motion.div
+          whileHover={{
+            scale: 1.4,
+            transition: { duration: 0.5 },
+          }}
+        >
+          <input
+            type="image"
+            border="0"
+            className="crack"
+            src="https://i.imgur.com/1Va0dQb.png"
+            alt="Cracked egg"
+          />
+        </motion.div>
+
         <br />
       </form>
     </div>
