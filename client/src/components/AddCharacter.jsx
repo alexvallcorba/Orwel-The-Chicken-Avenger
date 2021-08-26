@@ -5,9 +5,7 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
 import "./AddCharacter.css";
 import { motion } from "framer-motion";
-// import Zoom from "../services/sounds/zoom.wav";
-
-
+import Zoom from "../services/sounds/zoom.wav";
 
 function AddCharacter(props) {
   const [name, setName] = useState("");
@@ -20,11 +18,6 @@ function AddCharacter(props) {
   const params = useParams();
   const history = useHistory();
   // let audio = new Audio(Zoom);
-
-  // useEffect(() => {
-  //   audio.play();
-  // }, [])
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -39,30 +32,30 @@ function AddCharacter(props) {
       spray: "https://i.imgur.com/2IFjKrJ.png",
     };
     history.push("/");
+    // audio.play();
+
     await axios.post(baseURL, { fields: newCharacter }, config);
-    // }
     props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
   };
 
   return (
     <div className="boxContainer">
       <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 230,
-            damping: 100,
-          }}
-        >
-           <img
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 230,
+          damping: 100,
+        }}
+      >
+        <img
           id=""
           src="https://i.imgur.com/liRA4fH.png"
           className="buble"
           alt="buble-graffiti "
         />
-        </motion.div>
-     
+      </motion.div>
 
       <form className="formBox" onSubmit={handleSubmit}>
         <input
@@ -83,6 +76,8 @@ function AddCharacter(props) {
           value={type}
         />
         <br />
+        
+
         <input
           className="inputSize"
           placeholder="Hero or Villain"
@@ -90,7 +85,7 @@ function AddCharacter(props) {
           id="role"
           onChange={(e) => setRole(e.target.value)}
           value={role}
-          required
+          required 
         />
         <br />
         <input
@@ -118,14 +113,15 @@ function AddCharacter(props) {
           value={weaknesses}
         />
         <br />
-        <input type="image" border= "0"
+        <input
+          type="image"
+          border="0"
           // onClick={handleSubmit}
           className="crack"
           src="https://i.imgur.com/1Va0dQb.png"
           alt="Cracked egg"
-          />
+        />
         <br />
-
       </form>
     </div>
   );

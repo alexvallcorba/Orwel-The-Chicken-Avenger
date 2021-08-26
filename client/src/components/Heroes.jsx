@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 
 function Heroes(props) {
-  let audio = new Audio(Spray);
+  
 
   const heroes = props.characters.filter((character) => {
     console.log(character.fields.role);
@@ -15,6 +15,7 @@ function Heroes(props) {
 
   });
   console.log(heroes)
+  let audio = new Audio(Spray);
   
   useEffect(() => {
     audio.play();

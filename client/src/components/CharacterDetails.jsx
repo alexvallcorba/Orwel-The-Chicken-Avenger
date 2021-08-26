@@ -4,7 +4,6 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import "./CharacterDetails.css";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import Explosion from "../services/sounds/explosion1.wav";
 
 function CharacterDetails(props) {
@@ -42,30 +41,21 @@ function CharacterDetails(props) {
             alt=""
           />
         </motion.div>
-      <h1 className="detailsName">{character.fields.name}</h1>
-
+        <h1 className="detailsName">{character.fields.name}</h1>
       </div>
+
       <div className="detailsFields">
-        <p>
-          <h3>TYPE:</h3>
-          {character.fields.type}
-        </p>
-        <p>
-          <h3>ROLE:</h3>
-          {character.fields.role}
-        </p>
-        <p>
-          <h3>STRENGTHS:</h3>
-          {character.fields.strengths}
-        </p>
-        <p>
-          <h3>WEAKNESSES:</h3>
-          {character.fields.weaknesses}
-        </p>
-        <p>
-          <h3>LOCATION:</h3>
-          {character.fields.location}
-        </p>
+        <h3>TYPE:</h3>
+        <p>{character.fields.type}</p>
+        <h3>ROLE:</h3>
+        <p>{character.fields.role}</p>
+        <h3>STRENGTHS:</h3>
+        <p>{character.fields.strengths}</p>
+        <h3>WEAKNESSES:</h3>
+        <p>{character.fields.weaknesses}</p>
+        <h3>LOCATION:</h3>
+        <p>{character.fields.location}</p>
+
         <div className="TrashPosition">
           {character.fields.mainCharacter !== "true" ? (
             <motion.div

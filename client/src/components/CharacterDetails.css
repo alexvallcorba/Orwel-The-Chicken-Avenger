@@ -3,7 +3,7 @@
   height: 80%;
   width: 95%;
   justify-content: space-around;
-  border: white solid 4px;
+  /* border: white solid 4px; */
 }
 
 .character-image {
@@ -14,7 +14,7 @@
 }
 
 .image-container {
-  border: black solid 4px;
+  /* border: black solid 4px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@
   color:  rgb(37, 42, 91);
   font-family: "Permanent Marker", cursive;
   font-size: 50px;
-  border: peru solid 4px;
+  /* border: peru solid 4px; */
   text-align: center;
 }
 
@@ -42,15 +42,19 @@ h3 {
   align-items: center;
   width: 50%;
   height: 100%;
-  border: orchid solid 5px;
+  /* border: orchid solid 5px; */
+  padding-top: 0px;
 }
 
 .trashCan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 125px;
+  /* border: rgb(242, 255, 0)solid 4px; */
+  width: 100%;
 }
-.trashPosition {
-  width: 30%;
-}
+
 
 @media screen and (max-width: 480px) {
   .details-container
