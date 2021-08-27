@@ -10,14 +10,12 @@ ul {
 
 @media screen and (max-width: 480px) {
   .nav-bar {
-    width: 75%;
+    width: 65%;
+    height: 55%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
-  .links {
-    width: 50%;
-    height: 25%;
-  }
+
 }

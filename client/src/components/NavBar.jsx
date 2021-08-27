@@ -9,7 +9,7 @@ function NavBar() {
         <Link to="/heroes">
           <img
             className="links"
-            id="link1"
+            id="linkid"
             src="https://i.imgur.com/CNwhMRO.png"
             alt="Heroes Tab"
           />
@@ -19,7 +19,7 @@ function NavBar() {
         <Link to="/villains">
           <img
             className="links"
-            id="link2"
+            id="linkid"
             src="https://i.imgur.com/jkRyfYC.png"
             alt="villains Tab"
           />
@@ -29,7 +29,7 @@ function NavBar() {
         <Link to="/addcharacter">
           <img
             className="links"
-            id="link3"
+            id="linkid"
             src="https://i.imgur.com/CCJkzoe.png"
             alt="New Characters Tab"
           />

@@ -1,12 +1,13 @@
 .orwel-logo {
-  height: 100%;
-  width: 95%;
+  height: 90%;
+  width: 100%;
 }
 .header-logo {
   width: 20%;
 }
 .header {
-  width: 90%;
+  width: 98%;
+  height: 25%;
 }
 
 @media screen and (max-device-width: 480px) {

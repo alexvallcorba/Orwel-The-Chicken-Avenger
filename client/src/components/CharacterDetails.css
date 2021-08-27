@@ -1,9 +1,9 @@
 .details-container {
   display: flex;
-  height: 75%;
+  height: 70%;
   width: 95%;
   justify-content: space-around;
-  border:black solid 15px;
+  border: rgb(253, 251, 251) solid 15px;
   border-radius: 15px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,20 +12,20 @@
 }
 
 .character-image {
-  height: 325px;
+  height: 250px;
   margin-top: 25px;
-  
-
+  border: cyan solid 4px;
 }
 
 .image-container {
-  /* border: black solid 4px; */
+  border: rgb(234, 255, 0) solid 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 .detailsName {
-  color:  rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-family: "Permanent Marker", cursive;
   font-size: 50px;
   /* border: peru solid 4px; */
@@ -60,10 +60,8 @@ h3 {
   width: 100%;
 }
 
-
 @media screen and (max-width: 480px) {
-  .details-container
-   {
+  .details-container {
     width: 80%;
     display: flex;
     justify-content: space-around;
