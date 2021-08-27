@@ -3,7 +3,7 @@
   height: 70%;
   width: 95%;
   justify-content: space-around;
-  border: rgb(253, 251, 251) solid 15px;
+  border: rgb(1, 0, 0) solid 10px;
   border-radius: 15px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,11 +14,11 @@
 .character-image {
   height: 250px;
   margin-top: 25px;
-  border: cyan solid 4px;
+  /* border: cyan solid 4px; */
 }
 
 .image-container {
-  border: rgb(234, 255, 0) solid 4px;
+  /* border: rgb(234, 255, 0) solid 4px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
