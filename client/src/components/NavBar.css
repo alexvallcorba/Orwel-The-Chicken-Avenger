@@ -7,11 +7,6 @@ ul {
   width: 100%;
   justify-content: space-around;
 }
-.links {
-  width: 50%;
-  height: 25%;
-}
-
 
 @media screen and (max-width: 480px) {
   .nav-bar {
@@ -20,6 +15,9 @@ ul {
     justify-content: space-around;
     align-items: center;
   }
-}
 
- 
+  .links {
+    width: 50%;
+    height: 25%;
+  }
+}
