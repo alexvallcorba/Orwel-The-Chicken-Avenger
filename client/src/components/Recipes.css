@@ -23,7 +23,7 @@
 @media screen and (max-width: 480px) {
   .recipes-container
    {
-    width: 80%;
+    width: 50%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
