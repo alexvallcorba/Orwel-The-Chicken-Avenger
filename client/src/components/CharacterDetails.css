@@ -60,7 +60,7 @@ h3 {
   width: 100%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 375px) {
   .details-container {
     width: 80%;
     display: flex;

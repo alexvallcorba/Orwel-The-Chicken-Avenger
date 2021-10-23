@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import ReactPlayer from "react-player";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
+import Recipes from "./components/Recipes";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -66,6 +67,9 @@ function App() {
           characters={characters}
           setToggleFetch={setToggleFetch}
         />
+      </Route>
+      <Route  path="/recipes">
+        <Recipes />
       </Route>
       {!matches ? <NavBar /> : ""}
 

@@ -35,6 +35,16 @@ function NavBar() {
           />
         </Link>
       </li>
+      <li>
+        <Link to="/recipes">
+          <img
+            className="links"
+            id="linkid"
+            src="https://res.cloudinary.com/dhkeoqhmp/image/upload/v1634951332/portfolio/recipes-button_owzvn0.png"
+            alt="recipes Tab"
+          />
+        </Link>
+      </li>
     </ul>
   );
 }

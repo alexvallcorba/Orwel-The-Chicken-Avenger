@@ -37,7 +37,7 @@ input {
   height: 30%;
   align-items: center;
 
-}
+}padding
 
 .boxContainer {
   display: flex;

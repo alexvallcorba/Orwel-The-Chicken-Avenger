@@ -37,16 +37,19 @@
   height: 75px;
 }
 
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 375px) {
   .App {
     height: 100%;
   }
   .home {
     flex-direction: column;
     align-items: center;
+
   }
   .video {
-    width: 70%;
+    width:100%;
+    height: 100%;
+
 
   }
 }
