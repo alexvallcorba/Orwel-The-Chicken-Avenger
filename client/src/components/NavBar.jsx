@@ -29,7 +29,7 @@ function NavBar() {
         <Link to="/addcharacter">
           <img
             className="links"
-            id="linkid"
+            id="new-character"
             src="https://i.imgur.com/CCJkzoe.png"
             alt="New Characters Tab"
           />
@@ -39,7 +39,7 @@ function NavBar() {
         <Link to="/recipes">
           <img
             className="links"
-            id="linkid"
+            id="recipe"
             src="https://res.cloudinary.com/dhkeoqhmp/image/upload/v1634951332/portfolio/recipes-button_owzvn0.png"
             alt="recipes Tab"
           />

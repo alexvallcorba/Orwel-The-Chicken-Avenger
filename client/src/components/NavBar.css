@@ -8,6 +8,16 @@ ul {
   justify-content: space-around;
 }
 
+#new-character {
+  height: 125px;
+}
+
+#recipe{
+  padding-top: 9px;
+  height:140px;
+}
+
+
 @media screen and (max-width: 480px) {
   .nav-bar {
     width: 65%;
