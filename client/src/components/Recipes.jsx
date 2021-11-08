@@ -17,7 +17,7 @@ function Recipes() {
         <div className="image1">
         <h3 className="recipe-name">Roasted Chicken</h3>
 
-          <a className="anchor" target="_blank" href="https://drive.google.com/file/d/16qcBTxpKpDA5eGg6Y5V2jdLul_4IVQC_/view">
+          <a className="anchor" target="_blank" href="https://drive.google.com/file/d/16qcBTxpKpDA5eGg6Y5V2jdLul_4IVQC_/view?usp=sharing">
             <img className="recipe-image" src="https://res.cloudinary.com/dhkeoqhmp/image/upload/v1634952592/portfolio/roasted-chicken-button_o9vm6u.png" alt="roasted chicken" />
           </a>
         </div>
