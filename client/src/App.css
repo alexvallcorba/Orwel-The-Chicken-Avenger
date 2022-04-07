@@ -24,12 +24,12 @@
 
 
 
- .video-box {
+ .player {
   border: 10px solid black;
   border-radius: 15px;
-  margin-top: 25px;
- 
-}
+  width: 50%;
+  height:75%;
+  margin-top: 25px;}
 
 .spray {
   height: 275px;
