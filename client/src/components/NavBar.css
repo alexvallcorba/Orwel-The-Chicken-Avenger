@@ -23,7 +23,8 @@ ul {
     width: 65%;
     height: 55%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
 

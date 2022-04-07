@@ -16,21 +16,24 @@ import Recipes from "./components/Recipes";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [toggleFetch, setToggleFetch] = useState(false);
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 480px)").matches
   );
+
+  //call async await function that retrive the characters and puts them in the characters  array.
+  const getCharacters = async () => {
+    try {
+      const res = await axios.get(baseURL, config);
+      setCharacters(res.data.records);
+      console.log(characters)
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
   useEffect(() => {
-    const getCharacters = async () => {
-      try {
-        const res = await axios.get(baseURL, config);
-        setCharacters(res.data.records);
-      } catch (error) {
-        console.error(error.message);
-      }
-    };
+   
     getCharacters();
-  }, [toggleFetch]);
+  }, []);
 
   useEffect(() => {
     const handler = (e) => setMatches(e.matches);
@@ -55,18 +58,20 @@ function App() {
       </Route>
       <Route exact path="/heroes">
         <Heroes characters={characters} />
+        {/* passing props cause Heroes components can have the data from the chacters array */}
       </Route>
       <Route exact path="/villains">
         <Villains characters={characters} />
+        {/* passing props cause Villains components can have the data from the chacters array */}
+
       </Route>
       <Route exact path="/addcharacter">
-        <AddCharacter setToggleFetch={setToggleFetch} />
+        <AddCharacter addCharacterCallback = {getCharacters} />
       </Route>
       <Route path="/characterDetails/:id">
         <CharacterDetails
           characters={characters}
-          setToggleFetch={setToggleFetch}
-        />
+          removeCharacterCallback = {getCharacters} />
       </Route>
       <Route  path="/recipes">
         <Recipes />

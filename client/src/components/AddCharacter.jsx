@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { baseURL, config } from "../services";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
 import "./AddCharacter.css";
 import { motion } from "framer-motion";
@@ -15,7 +14,7 @@ function AddCharacter(props) {
   const [weaknesses, setWeaknesses] = useState("");
   const [location, setLocation] = useState("");
 
-  const params = useParams();
+  
   const history = useHistory();
   let audio = new Audio(Zoom);
 
@@ -33,9 +32,10 @@ function AddCharacter(props) {
     };
     history.push("/");
     audio.play();
-
+    
+//once character is created pushes the new character into the characters array.
     await axios.post(baseURL, { fields: newCharacter }, config);
-    props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
+    props.addCharacterCallback()
   };
 
   return (

@@ -18,8 +18,9 @@ function Heroes(props) {
   let audio = new Audio(Spray);
   
   useEffect(() => {
+    
     audio.play();
-  }, [])
+  })
 
   return (
     <>

@@ -8,7 +8,9 @@ import Explosion from "../services/sounds/explosion1.wav";
 
 function CharacterDetails(props) {
   const { id } = useParams();
+  //using paramas so we can find each individual character. 
   const history = useHistory();
+  // useHistory. when delete a character, push is back to landing page. line 24
 
   const character = props.characters.find((character) => character.id === id);
   console.log(character);
@@ -17,7 +19,7 @@ function CharacterDetails(props) {
 
   const handleDelete = async () => {
     await axios.delete(`${baseURL}/${character.id}`, config);
-    props.setToggleFetch((prevToggleFetch) => !prevToggleFetch);
+    props.removeCharacterCallback()   // line 21 changes the value and things happen based on value.
     audio.play();
     history.push("/");
   };
@@ -65,6 +67,7 @@ function CharacterDetails(props) {
               }}
             >
               <img
+                alt="Trash can"
                 className="trashCan"
                 src="https://i.imgur.com/EArYeyj.png"
                 onClick={handleDelete}

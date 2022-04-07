@@ -14,7 +14,7 @@ function Villains(props) {
 
   useEffect(() => {
     audio.play();
-  }, []);
+  });
 
   return (
     <>
