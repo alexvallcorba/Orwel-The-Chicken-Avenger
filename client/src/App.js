@@ -13,12 +13,16 @@ import ReactPlayer from "react-player";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Recipes from "./components/Recipes";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 480px)").matches
   );
+  const handle = useFullScreenHandle();
+
 
   //call async await function that retrive the characters and puts them in the characters  array.
   const getCharacters = async () => {
@@ -50,29 +54,43 @@ function App() {
       <Route path="/" exact>
         <div className="home">
           <About />
-          <div className="video">
-            <ReactPlayer width={"100%"} height={"100%"} url="https://youtu.be/uYAoxHidMqs" />
+
+          <div  className="video-box" onClick={handle.enter}>
+            <FullScreen  className="youtube" handle={handle}>
+              <ReactPlayer   className="player" url="https://youtu.be/uYAoxHidMqs" />
+            </FullScreen>
+            
+          </div>
           
-            </div>
         </div>
+
+
+
+
+
+
       </Route>
+
       <Route exact path="/heroes">
         <Heroes characters={characters} />
         {/* passing props cause Heroes components can have the data from the chacters array */}
       </Route>
+
       <Route exact path="/villains">
         <Villains characters={characters} />
         {/* passing props cause Villains components can have the data from the chacters array */}
-
       </Route>
+
       <Route exact path="/addcharacter">
         <AddCharacter addCharacterCallback = {getCharacters} />
       </Route>
+
       <Route path="/characterDetails/:id">
         <CharacterDetails
           characters={characters}
           removeCharacterCallback = {getCharacters} />
       </Route>
+
       <Route  path="/recipes">
         <Recipes />
       </Route>
@@ -84,3 +102,6 @@ function App() {
 }
 
 export default App;
+            
+          
+            
