@@ -54,15 +54,17 @@ function App() {
       <Route path="/" exact>
         <div className="home">
           <About />
-          <FullScreen handle={handle}>
-            <ReactPlayer
-              onClick={handle.enter}
-              className="player"
-              url="https://youtu.be/uYAoxHidMqs" />
-          </FullScreen>
+          <div className="videoBox">
+             {/* <button onClick={handle.enter}>
+                 Enter fullscreen
+              </button> */}
+
+              <FullScreen handle={handle}>
+                  <ReactPlayer className="player" url="https://youtu.be/uYAoxHidMqs" />
+              </FullScreen>
+    </div>
         </div>
 
-        
             
             
           
